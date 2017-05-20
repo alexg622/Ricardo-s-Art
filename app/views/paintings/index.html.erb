@@ -1,0 +1,8 @@
+<h1>Here are all of our paintings</h1>
+<% if @paintings.any? %>
+	<% @paintings.each do |painting| %>
+		<%= link_to "#{painting.artist}", painting %>	
+	<% end %>
+<% end %>
+
+<%= link_to "Submit your art", new_painting_path %>
