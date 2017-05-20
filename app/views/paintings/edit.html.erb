@@ -1,0 +1,22 @@
+<% if @errors && @errors.any? %>
+	<% @errors.each do |error| %>
+	<ul>
+		<li><%= error %></li>
+	</ul>
+	<% end %>
+<% end %>
+<%= form_for @painting, html: { multipart: true } do |f| %>
+<ul style="list-style-type: none;">
+	<li><%= f.text_field :artist, placeholder: "artist" %></li>
+	<li><%= f.email_field :artist_email, placeholder: "email" %></li>
+	<li><%= f.phone_field :artist_phone_number, placeholder: "phone number" %></li>
+	<li><%= f.text_field :name_of_painting, placeholder: "name of painting" %></li>
+	<li><%= f.text_field :price, placeholder: "price" %></li>
+	<li><label>Description</label></li>
+	<li><%= f.text_area :description, size: "60X12" %></li>
+    <li><%= image_tag(@painting.avatar_url) if @painting.avatar? %></li>
+    <li><%= f.file_field :avatar %></li>
+    <li><%= f.hidden_field :avatar_cache %></li>
+    <li><%= f.submit "Submit painting" %></li>
+</ul>
+<% end %>
