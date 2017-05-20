@@ -1,11 +1,13 @@
-<h1>Here are all of our paintings</h1>
+<div class="center">
+	<h1>The Paintings</h1>
+</div>
 <% if @paintings.any? %>
 	<% @paintings.each do |painting| %>
-	<ul style="list-style-type: none;">
+	<ul style="list-style-type: none;" class="center">
 		<li>Title: <%= link_to "#{painting.name_of_painting}", painting %></li>
 		<li><%= link_to image_tag(painting.avatar_url(:thumb).to_s), painting %></li>
 		
-		<li>Artist: <%= painting.artist.first_name %> | Price: $<%= painting.price %></li>
+		<li>Artist: <%= link_to "#{painting.artist.first_name} #{painting.artist.last_name}", artist_path(painting.artist) %> | Price: $<%= painting.price %></li>
 		<li>Email: <%= painting.artist.email %> | Phone: <%= painting.artist.phone %></p></li> 	
 	</ul>
 	<% end %>

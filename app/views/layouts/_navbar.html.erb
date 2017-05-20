@@ -1,0 +1,12 @@
+ <nav>
+    <div class="nav-wrapper pink lighten-3">
+      <a href="#" class="brand-logo">Ricardo's Art</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="<%= root_path %>">Home</a></li>
+      <% if current_user %>
+        <li><a data-method="delete" href="/logout">Logout</a></li>
+        <li><%= link_to "Profile", current_user %></li>
+      <% end %>
+      </ul>
+    </div>;
+  </nav>
