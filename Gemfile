@@ -34,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem "mini_magick"
 gem 'bcrypt'
+gem 'materialize-sass'
+gem 'jquery-turbolinks'
 
 gem 'carrierwave', '~> 1.0'
 
