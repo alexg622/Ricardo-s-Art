@@ -1,3 +1,5 @@
 <h1><%= image_tag(@painting.avatar_url)  %></h1>
-<%= link_to "Edit Painting", edit_painting_path(@painting) %>
-<%= link_to "Delete Painting", @painting, method: :delete %>
+<% if  current_user %>	
+	<%= link_to "Edit Painting", edit_painting_path(@painting) %>
+	<%= link_to "Delete Painting", @painting, method: :delete %>
+<% end %>

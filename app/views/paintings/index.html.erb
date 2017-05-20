@@ -4,5 +4,6 @@
 		<%= link_to "#{painting.artist}", painting %>	
 	<% end %>
 <% end %>
-
-<%= link_to "Submit your art", new_painting_path %>
+<% if current_user %>	
+	<%= link_to "Submit your art", new_painting_path %>
+<% end %>

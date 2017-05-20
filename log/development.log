@@ -1302,3 +1302,276 @@ Processing by PaintingsController#index as HTML
 Completed 200 OK in 33ms (Views: 29.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/paintings" for 127.0.0.1 at 2017-05-19 23:44:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.0.3) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.3) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.3) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.3) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.3) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.3) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.3) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.3) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.3) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.3) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (96.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2715528583517038065);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170520062749)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "password_digest" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170520062749"]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2715528583517038065)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/paintings" for 127.0.0.1 at 2017-05-19 23:45:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  Rendered paintings/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 334ms (Views: 306.2ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "alexg622"], ["password_digest", "$2a$10$S1dUsAIIVPHpJL9EdR9LbOrtzAvk/cBJJi2czPVzVUsAO7TryMuRG"], ["created_at", "2017-05-20 06:47:40.937956"], ["updated_at", "2017-05-20 06:47:40.937956"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/login" for 127.0.0.1 at 2017-05-19 23:47:53 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 314ms (Views: 298.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-19 23:47:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nu8mG3oS/Iqcxl9Vu0MOvD2T5kzT0nFTT3AOwy0FNc2378CLPV2wfPvCY+7V3qMguPws/lNGGUKL+9UGmlOXhg==", "username"=>"alexg622", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 120ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:47:59 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 42ms (Views: 25.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/paintings/new" for 127.0.0.1 at 2017-05-19 23:48:01 -0700
+Processing by PaintingsController#new as HTML
+  Rendering paintings/new.html.erb within layouts/application
+  Rendered paintings/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 157ms (Views: 86.2ms | ActiveRecord: 53.5ms)
+
+
+Started POST "/paintings" for 127.0.0.1 at 2017-05-19 23:48:29 -0700
+Processing by PaintingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QXXeSaufob7zbkSpXC9SgdO7nEAZoKZtd5XIr3lLy/rvpAUfaMi5J483brmEeyMnMuJlQBykoKBgEIA+Q1en5w==", "painting"=>{"artist"=>"Alex", "artist_email"=>"alex@mail.com", "artist_phone_number"=>"415-909-0164", "name_of_painting"=>"my pice ", "price"=>"333333", "description"=>"great piece ", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fefdad6cde8 @tempfile=#<Tempfile:/var/folders/_m/7pfjdz6d0hs711m74bfgbcrm0000gn/T/RackMultipart20170519-16876-13rpacd.jpg>, @original_filename="VintSF - Day 3 (1 of 72).jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"painting[avatar]\"; filename=\"VintSF - Day 3 (1 of 72).jpg\"\r\nContent-Type: image/jpeg\r\n">, "avatar_cache"=>""}, "commit"=>"Submit painting"}
+Unpermitted parameter: avatar_cache
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "paintings" ("artist", "artist_email", "artist_phone_number", "name_of_painting", "price", "description", "created_at", "updated_at", "avatar") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["artist", "Alex"], ["artist_email", "alex@mail.com"], ["artist_phone_number", "415-909-0164"], ["name_of_painting", "my pice "], ["price", 333333], ["description", "great piece "], ["created_at", "2017-05-20 06:48:30.523782"], ["updated_at", "2017-05-20 06:48:30.523782"], ["avatar", "VintSF_-_Day_3__1_of_72_.jpg"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/paintings/5
+Completed 302 Found in 623ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/paintings/5" for 127.0.0.1 at 2017-05-19 23:48:30 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPainting Load (0.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 99ms (Views: 86.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/paintings/5/edit" for 127.0.0.1 at 2017-05-19 23:48:48 -0700
+Processing by PaintingsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPainting Load (1.5ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering paintings/edit.html.erb within layouts/application
+  Rendered paintings/edit.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 110ms (Views: 96.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2017-05-19 23:48:53 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.3ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/paintings/5" for 127.0.0.1 at 2017-05-19 23:48:56 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPainting Load (21.0ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 101ms (Views: 44.1ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/paintings" for 127.0.0.1 at 2017-05-19 23:50:23 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.2ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/index.html.erb within layouts/application (5.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 42.4ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-19 23:50:25 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bddEoKH4Rl/UQ2zbZGhbMD0gCjXN0rzTI+giVfaNoLvs16Iw5rcKqbNHUGAK9fasuE/Ah01G1MLnY/mQQdsC8A=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:25 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.3ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendered paintings/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 52ms (Views: 47.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:27 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.6ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendered paintings/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 60ms (Views: 49.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:28 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.4ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendered paintings/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 53ms (Views: 48.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-19 23:50:32 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-19 23:50:38 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7SLKRfuk1k192RC9QqsxCNgx3T8tTs+BpRRRkN0q6cFsIizVvOuauxrdLAYsNpyUXV4Xja3ap5Bhn4pVanxLig==", "username"=>"alexg622", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:38 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.2ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/index.html.erb within layouts/application (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 24.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:40 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.6ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/index.html.erb within layouts/application (27.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 36.7ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:40 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.3ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/index.html.erb within layouts/application (7.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 49ms (Views: 44.2ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-19 23:50:41 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9XBdhQ+UWK4P5tHRYQTdH5s7VhXFRPDbDo8zyAHEYY90cLsVSNsUWGji7WoPmXCDHlScp0XQmMrKBOgNtpLDxA=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-19 23:50:41 -0700
+Processing by PaintingsController#index as HTML
+  Rendering paintings/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "paintings"[0m
+  [1m[36mPainting Load (0.3ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendered paintings/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.7ms)
+
+
