@@ -9,6 +9,10 @@
   </head>
 
   <body>
+  	<%= link_to "Home", root_path %>
+  	<% if current_user %>
+  		<%= link_to "Logout", '/logout', method: :delete %>
+  	<% end %>
     <%= yield %>
   </body>
 </html>
