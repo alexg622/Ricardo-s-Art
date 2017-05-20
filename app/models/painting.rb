@@ -1,4 +1,5 @@
 class Painting < ApplicationRecord
-	validates :artist, :artist_email, :artist_phone_number, :name_of_painting, :price, :description, presence: true
+	validates :name_of_painting, :price, :description, presence: true
 	mount_uploader :avatar, AvatarUploader
+	belongs_to :artist 
 end

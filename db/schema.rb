@@ -10,28 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170520062749) do
+ActiveRecord::Schema.define(version: 20170520170647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "paintings", force: :cascade do |t|
-    t.string   "artist"
-    t.string   "artist_email"
-    t.string   "artist_phone_number"
-    t.string   "name_of_painting"
-    t.integer  "price"
-    t.text     "description"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "avatar"
-  end
-
-  create_table "users", force: :cascade do |t|
+  create_table "artists", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "bio"
     t.string   "username"
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "avatar"
+  end
+
+  create_table "paintings", force: :cascade do |t|
+    t.string   "name_of_painting"
+    t.string   "price"
+    t.text     "description"
+    t.integer  "artist_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.string   "avatar"
   end
 
 end

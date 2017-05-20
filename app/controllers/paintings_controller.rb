@@ -19,6 +19,7 @@ class PaintingsController < ApplicationController
 
 	def show 
 		@painting = Painting.find(params[:id])
+		@artist = @painting.artist 
 	end 
 
 	def edit
@@ -43,6 +44,6 @@ class PaintingsController < ApplicationController
 	end  
 
 	def paintings_params
-		params.require(:painting).permit(:artist, :artist_email, :artist_phone_number, :name_of_painting, :price, :description, :avatar)
+		params.require(:painting).permit(:artist_id, :name_of_painting, :price, :description, :avatar)
 	end 
 end 

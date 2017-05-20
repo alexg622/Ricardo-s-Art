@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
 	end 
 
 	def create 
-		@user = User.find_by(username: params[:username])
-		if @user
-			if @user.authenticate(params[:password])
-				login(@user)
+		@artist = Artist.find_by(username: params[:username])
+		if @artist
+			if @artist.authenticate(params[:password])
+				login(@artist)
 				redirect_to root_path 
 			end 
 		else 

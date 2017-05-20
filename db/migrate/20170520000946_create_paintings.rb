@@ -1,12 +1,10 @@
 class CreatePaintings < ActiveRecord::Migration[5.0]
   def change
-    create_table :paintings do |t|
-    	t.string :artist
-    	t.string :artist_email
-    	t.string :artist_phone_number  
+    create_table :paintings do |t|  
     	t.string :name_of_painting
-    	t.integer :price 
+    	t.string :price 
     	t.text :description 
+      t.integer :artist_id
 
 
       t.timestamps
