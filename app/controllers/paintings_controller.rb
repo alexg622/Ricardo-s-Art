@@ -1,9 +1,5 @@
 class PaintingsController < ApplicationController
-	def index 
-		@paintings = Painting.all
-		@artist = Artist.find(current_user.id) 
-	end 
-
+	
 	def new 
 		@painting = Painting.new 
 		@artist = Artist.find(params[:artist_id])
