@@ -14,9 +14,10 @@
  *= require_self
  */
 @import 'materialize';
+@import 'animate';
 @import "materialize/components/color";
 $primary-color: color("blue", "lighten-2") !default;
 $secondary-color: color("yellow", "base") !default;
-@import "materialize/extras/nouislider";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "materialize/extras/nouislider";
 
