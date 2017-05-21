@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-	root "paintings#index"
-	resources :paintings 
+	root "artists#index"
+	resources :artists do 
+		resources :paintings
+	end  
 	resources :sessions
-	resources :artists
 	get '/login' => "sessions#new"
 	post '/login' => "sessions#create"
 	delete '/logout' => "sessions#destroy"
