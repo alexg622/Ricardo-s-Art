@@ -32,9 +32,12 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'wow-rails'
+gem 'animate-rails'
 gem "mini_magick"
 gem 'bcrypt'
 gem 'materialize-sass'
+gem 'jquery-ui-rails'
 gem 'jquery-turbolinks'
 
 gem 'carrierwave', '~> 1.0'
