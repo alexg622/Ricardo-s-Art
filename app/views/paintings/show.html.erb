@@ -15,6 +15,6 @@
 </div>
 
 <% if  current_user %>	
-	<%= link_to "Edit Painting", edit_painting_path(@painting) %>
-	<%= link_to "Delete Painting", @painting, method: :delete %>
+	<%= link_to "Edit Painting", edit_artist_painting_path(@artist, @painting) %>
+	<%= link_to "Delete Painting", artist_painting_path(@artist, @painting), method: :delete %>
 <% end %>

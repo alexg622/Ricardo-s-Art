@@ -5,7 +5,7 @@
 	</ul>
 	<% end %>
 <% end %>
-<%= form_for @painting, html: { multipart: true } do |f| %>
+<%= form_for @painting, url: artist_painting_path(@artist, @painting), html: { multipart: true } do |f| %>
 <ul style="list-style-type: none;">
 	<li><%= f.text_field :name_of_painting, placeholder: "name of painting" %></li>
 	<li><%= f.text_field :price, placeholder: "price" %></li>
