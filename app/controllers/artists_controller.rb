@@ -1,7 +1,7 @@
 class ArtistsController < ApplicationController 
 
 	def index
-		@paintings = Painting.all 
+		@paintings = Painting.all.sort_by{|painting| painting.price.tr(',', '').to_i}.reverse
 	end 
 
 	def show 
