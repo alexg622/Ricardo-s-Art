@@ -1,18 +1,26 @@
 class PaintingsController < ApplicationController
-	
+
 	def new 
-		@painting = Painting.new 
-		@artist = Artist.find(params[:artist_id])
+		if current_user
+			@painting = Painting.new 
+			@artist = Artist.find(params[:artist_id])
+		else
+			redirect_to root_path
+		end 
 	end 
 
 	def create 
-		@painting = Painting.new(paintings_params)
-		@artist = Artist.find(params[:artist_id])
-		if @painting.save
-			redirect_to artist_painting_path(@artist, @painting) 
+		if current_user
+			@painting = Painting.new(paintings_params)
+			@artist = Artist.find(params[:artist_id])
+			if @painting.save
+				redirect_to artist_painting_path(@artist, @painting) 
+			else 
+				@errors = @painting.errors.full_messages
+				render 'new'
+			end 
 		else 
-			@errors = @painting.errors.full_messages
-			render 'new'
+			redirect_to root_path 
 		end 
 	end 
 
@@ -22,26 +30,38 @@ class PaintingsController < ApplicationController
 	end 
 
 	def edit
-		@artist = Artist.find(params[:artist_id])
-		@painting = Painting.find(params[:id])
+		if current_user
+			@artist = Artist.find(params[:artist_id])
+			@painting = Painting.find(params[:id])
+		else 
+			redirect_to root_path
+		end 
 	end 
 
 	def update 
-		@painting = Painting.find(params[:id])
-		@artist = Artist.find(params[:artist_id])
-		@painting.assign_attributes(paintings_params)
-		if @painting.save
-			redirect_to artist_painting_path(@artist, @painting) 
+		if current_user
+			@painting = Painting.find(params[:id])
+			@artist = Artist.find(params[:artist_id])
+			@painting.assign_attributes(paintings_params)
+			if @painting.save
+				redirect_to artist_painting_path(@artist, @painting) 
+			else 
+				@errors = @painting.errors.full_messages
+				render 'edit'
+			end
 		else 
-			@errors = @painting.errors.full_messages
-			render 'edit'
-		end
+			redirect_to root_path
+		end 
 	end 
 
 	def destroy
-		@painting = Painting.find(params[:id])
-		@painting.delete
-		redirect_to root_path
+		if current_user
+			@painting = Painting.find(params[:id])
+			@painting.delete
+			redirect_to root_path
+		else 
+			redirect_to root_path
+		end 
 	end  
 
 	def paintings_params

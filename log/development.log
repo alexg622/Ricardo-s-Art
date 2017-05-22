@@ -9748,3 +9748,976 @@ Processing by ArtistsController#index as HTML
 Completed 200 OK in 216ms (Views: 203.1ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:02:59 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (13.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (12.7ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (9.4ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 1134ms (Views: 997.5ms | ActiveRecord: 56.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:03:06 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (5.8ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 145ms (Views: 125.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:03:14 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (6.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_navbar.html.erb (15.1ms)
+Completed 200 OK in 491ms (Views: 448.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-22 12:03:24 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (22.7ms)
+  Rendered layouts/_navbar.html.erb (3.4ms)
+Completed 200 OK in 340ms (Views: 317.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-22 12:03:31 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tAeEbv0gNILS/plsB6/wvOH1wdBBKy8eQXgyug06qrs1B2L+um94dLX6pddpMl0gZJoLYsG/Rw+F8+l/umwI8A==", "username"=>"alexg622", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mArtist Load (8.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 8.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:03:31 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (1.8ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (16.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.7ms)
+Completed 200 OK in 100ms (Views: 93.6ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:03:34 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (20.9ms)
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (11.9ms)
+Completed 200 OK in 354ms (Views: 302.7ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2017-05-22 12:03:37 -0700
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/edit.html.erb within layouts/application (59.0ms)
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (4.7ms)
+Completed 200 OK in 158ms (Views: 144.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/artists/1" for 127.0.0.1 at 2017-05-22 12:03:49 -0700
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/iJCtRckGVpab1LidJAKqyomCsPUUZ/Cxg5ghwgnX9wI1p49D3DMbu+XEI7f7d208TThdXS4yY+xNnDm3SXDxg==", "artist"=>{"first_name"=>"Ricardo", "last_name"=>"Montenbruck", "email"=>"alex@mail.com", "phone"=>"415-909-0164", "bio"=>"great artist", "password"=>"[FILTERED]", "avatar_cache"=>""}, "commit"=>"Update Profile", "id"=>"1"}
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: avatar_cache
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Exists (7.4ms)[0m  [1m[34mSELECT  1 AS one FROM "artists" WHERE "artists"."username" = $1 AND ("artists"."id" != $2) LIMIT $3[0m  [["username", "alexg622"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (20.7ms)[0m  [1m[33mUPDATE "artists" SET "first_name" = $1, "password_digest" = $2, "updated_at" = $3 WHERE "artists"."id" = $4[0m  [["first_name", "Ricardo"], ["password_digest", "$2a$10$QwacOqU5zWrYg4Ehn5GFZeLlw/TEjYMEa9Ej.pWqMk8B18EbNmcNu"], ["updated_at", "2017-05-22 19:03:49.371131"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/artists/1
+Completed 302 Found in 195ms (ActiveRecord: 33.4ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:03:49 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 75ms (Views: 68.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2017-05-22 12:03:52 -0700
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (25.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/edit.html.erb within layouts/application (6.3ms)
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (11.8ms)
+Completed 200 OK in 179ms (Views: 142.2ms | ActiveRecord: 26.8ms)
+
+
+Started PATCH "/artists/1" for 127.0.0.1 at 2017-05-22 12:04:14 -0700
+Processing by ArtistsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pCqWMICwu8R51SbxmmoSCMnhu4vajrrCx8lypb9iqv1S3kq4mORu8MwtZJ0xF8UXEvNQPXpn7I+w8WLEamA25w==", "artist"=>{"first_name"=>"Ricardo", "last_name"=>"Montenbruck", "email"=>"alex@mail.com", "phone"=>"415-909-0164", "bio"=>"great artist", "password"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fc4611c7b40 @tempfile=#<Tempfile:/var/folders/_m/7pfjdz6d0hs711m74bfgbcrm0000gn/T/RackMultipart20170522-30261-r4n6r3.jpeg>, @original_filename="stary_night.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"artist[avatar]\"; filename=\"stary_night.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "avatar_cache"=>""}, "commit"=>"Update Profile", "id"=>"1"}
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: avatar_cache
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mArtist Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "artists" WHERE "artists"."username" = $1 AND ("artists"."id" != $2) LIMIT $3[0m  [["username", "alexg622"], ["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "artists" SET "password_digest" = $1, "avatar" = $2, "updated_at" = $3 WHERE "artists"."id" = $4[0m  [["password_digest", "$2a$10$tRhHapIyihtAI3yq4hxxDuMku5EZ/8o9i/Cyy0REPuLuTQvqsmTFS"], ["avatar", "stary_night.jpeg"], ["updated_at", "2017-05-22 19:04:14.650590"], ["id", 1]]
+  [1m[35m (11.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/artists/1
+Completed 302 Found in 662ms (ActiveRecord: 16.5ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:04:14 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (14.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (20.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 273ms (Views: 248.5ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:04:19 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (1.5ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (26.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 123ms (Views: 113.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:04:28 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (2.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 460ms (Views: 450.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:07:30 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (5.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (4.0ms)
+Completed 200 OK in 243ms (Views: 164.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2017-05-22 12:07:34 -0700
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/edit.html.erb within layouts/application
+  Rendered artists/edit.html.erb within layouts/application (15.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.3ms)
+Completed 200 OK in 148ms (Views: 134.6ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-22 12:07:37 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4CQ1JaMWNKJjRCR8YhfwhC8O6bot4wQqPxHEVyfm2jZhJNO15Fl4VARAGMcMil0YqmEjCK13bDv7mh+SkLB4fQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:07:37 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.7ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 180ms (Views: 95.5ms | ActiveRecord: 54.6ms)
+
+
+Started GET "/artists/1/edit" for 127.0.0.1 at 2017-05-22 12:07:41 -0700
+Processing by ArtistsController#edit as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:07:41 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (2.7ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_navbar.html.erb (4.1ms)
+Completed 200 OK in 268ms (Views: 232.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-22 12:07:49 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 152ms (Views: 148.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-22 12:08:01 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i+AxJQqXb4mIBkBuDaOVgvytIhL7ZYGRMNuGy7pIhEoK4Ne1Tdgjf+8CfNVjPjgeecLooHvx6YD0UF0ODR4mAQ==", "username"=>"alexg622", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 132ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:08:01 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.9ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (71.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.0ms)
+Completed 200 OK in 245ms (Views: 228.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/artists/1/paintings/new" for 127.0.0.1 at 2017-05-22 12:08:05 -0700
+Processing by PaintingsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/new.html.erb within layouts/application
+  [1m[36mArtist Load (1.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/new.html.erb within layouts/application (28.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.4ms)
+Completed 200 OK in 371ms (Views: 362.2ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-22 12:08:10 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a6D+N2EBWBJVyIL7t9ZNs649+IxgD/mJIPf8TlH+uTnqoBinJk4U5DLMvkDZS+AvK1IyPuCbkZjkfCeL5qgbcg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:08:10 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.6ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (16.8ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 130ms (Views: 125.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/artists/1/paintings/new" for 127.0.0.1 at 2017-05-22 12:08:12 -0700
+Processing by PaintingsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/new.html.erb within layouts/application
+  Rendered paintings/new.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    15:     <li><%= image_tag(@painting.avatar_url) if @painting.avatar? %></li>
+    16:     <li><%= f.file_field :avatar %></li>
+    17:     <li><%= f.hidden_field :avatar_cache %></li>
+    18:     <%= f.hidden_field :artist_id, value: current_user.id %>
+    19:     <li><%= f.submit "Submit painting" %></li>
+    20: </ul>
+    21: <% end %>
+  
+app/views/paintings/new.html.erb:18:in `block in _app_views_paintings_new_html_erb___2536925882768729954_70240687723440'
+app/views/paintings/new.html.erb:9:in `_app_views_paintings_new_html_erb___2536925882768729954_70240687723440'
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendering /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/Alex/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (115.6ms)
+Started GET "/artists/1/paintings/new" for 127.0.0.1 at 2017-05-22 12:08:43 -0700
+Processing by PaintingsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:08:43 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (5.6ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (42.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 187ms (Views: 125.9ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/artists/1/paintings/new" for 127.0.0.1 at 2017-05-22 12:08:47 -0700
+Processing by PaintingsController#new as HTML
+  Parameters: {"artist_id"=>"1"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:08:47 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.9ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 81ms (Views: 75.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-22 12:09:20 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (1.0ms)
+Completed 200 OK in 116ms (Views: 113.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-22 12:09:24 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ji7L/qvdOuw7uWpHDPXGPD1Dni+wVXRjFnJ9i3UtWnKnLi1u7JJ2Gly9VvxiaGuguCxUnTDBHHLS+aZOwnv4OQ==", "username"=>"alexg622", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 109ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:09:24 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.5ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (13.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 105ms (Views: 93.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:09:28 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (0.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/show.html.erb within layouts/application (4.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.9ms)
+Completed 200 OK in 142ms (Views: 133.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/1/paintings/8/edit" for 127.0.0.1 at 2017-05-22 12:09:31 -0700
+Processing by PaintingsController#edit as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPainting Load (0.5ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering paintings/edit.html.erb within layouts/application
+  [1m[36mCACHE (1.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/edit.html.erb within layouts/application (15.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.0ms)
+Completed 200 OK in 136ms (Views: 118.2ms | ActiveRecord: 2.5ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-22 12:09:53 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KmU7F1YGahAn+7YFHyUzmX6SVCtQ9jAGwJAGCvb/6y6rZd2HEUkm5kD/ir5xuJ4F+/2emdBiWBcEG93PQalJZQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:09:53 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (2.2ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (52.7ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 241ms (Views: 223.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/artists/1/paintings/8/edit" for 127.0.0.1 at 2017-05-22 12:09:55 -0700
+Processing by PaintingsController#edit as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:09:55 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.9ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (17.3ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 126ms (Views: 119.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:10:02 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 180ms (Views: 174.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:11:55 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (8.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_navbar.html.erb (3.5ms)
+Completed 200 OK in 219ms (Views: 177.8ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:12:26 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_navbar.html.erb (7.1ms)
+Completed 200 OK in 258ms (Views: 235.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:13:15 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (17.8ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 286ms (Views: 246.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:13:42 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 113ms (Views: 109.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:13:57 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 141ms (Views: 125.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:14:09 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 115ms (Views: 111.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:14:30 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (20.7ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 245ms (Views: 210.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:14:40 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (10.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 114ms (Views: 98.1ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:15:05 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 223ms (Views: 194.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:15:20 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+Completed 200 OK in 369ms (Views: 321.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:15:36 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 106ms (Views: 100.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:16:02 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (5.0ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (116.6ms)
+  Rendered layouts/_navbar.html.erb (3.4ms)
+Completed 200 OK in 491ms (Views: 392.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:16:06 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (1.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (3.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 279ms (Views: 211.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:16:28 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (0.8ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (7.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 139ms (Views: 124.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:16:52 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (1.1ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 272ms (Views: 221.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:17:10 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (111.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (50.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (23.4ms)
+  Rendered layouts/_navbar.html.erb (6.0ms)
+Completed 200 OK in 1309ms (Views: 841.2ms | ActiveRecord: 162.0ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:17:27 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (7.3ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (6.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_navbar.html.erb (3.8ms)
+Completed 200 OK in 223ms (Views: 174.7ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:17:34 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (0.7ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (17.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (89.5ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 276ms (Views: 250.7ms | ActiveRecord: 18.4ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:17:42 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (13.3ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navbar.html.erb (6.4ms)
+Completed 200 OK in 189ms (Views: 160.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:17:54 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (8.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (30.5ms)
+  Rendered layouts/_navbar.html.erb (3.7ms)
+Completed 200 OK in 350ms (Views: 285.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:18:03 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (6.3ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 266ms (Views: 219.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:18:10 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (13.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 190ms (Views: 160.5ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:18:24 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (12.0ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 179ms (Views: 152.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:18:34 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (3.6ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (25.4ms)
+  Rendered layouts/_navbar.html.erb (3.6ms)
+Completed 200 OK in 272ms (Views: 242.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:18:45 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (3.8ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (8.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (20.4ms)
+  Rendered layouts/_navbar.html.erb (3.2ms)
+Completed 200 OK in 279ms (Views: 238.6ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:19:01 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (5.8ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_navbar.html.erb (5.0ms)
+Completed 200 OK in 278ms (Views: 224.3ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:19:09 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (10.2ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 160ms (Views: 133.7ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:19:14 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  Rendered artists/show.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+Completed 200 OK in 127ms (Views: 122.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:19:20 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (12.8ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (2.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (31.0ms)
+  Rendered layouts/_navbar.html.erb (2.9ms)
+Completed 200 OK in 200ms (Views: 179.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:19:24 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (6.4ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (13.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 350ms (Views: 320.9ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:19:29 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (15.3ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (6.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (43.5ms)
+  Rendered layouts/_navbar.html.erb (3.8ms)
+Completed 200 OK in 194ms (Views: 167.9ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-05-22 12:19:40 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 95ms (Views: 91.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-05-22 12:19:46 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjBXU8UnW5WhKx3bi1yEHlWGoMsds3WyTbrL+OodxdrnMLHDgmgXY8YvIWDlwSmC0OlqeZ0nHaOJMRA9XUtnkQ==", "username"=>"alexg622", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mArtist Load (7.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."username" = $1 LIMIT $2[0m  [["username", "alexg622"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 115ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:19:46 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (6.8ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (13.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (3.9ms)
+Completed 200 OK in 104ms (Views: 92.0ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/artists/1/paintings/6" for 127.0.0.1 at 2017-05-22 12:19:54 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"6"}
+  [1m[36mPainting Load (7.6ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered paintings/show.html.erb within layouts/application (5.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 126ms (Views: 111.9ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:20:00 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (13.3ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (33.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (6.3ms)
+Completed 200 OK in 180ms (Views: 160.6ms | ActiveRecord: 14.2ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:20:02 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (8.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (27.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 159ms (Views: 144.9ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/artists/1" for 127.0.0.1 at 2017-05-22 12:20:09 -0700
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering artists/show.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/show.html.erb within layouts/application (3.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.6ms)
+Completed 200 OK in 86ms (Views: 81.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2017-05-22 12:20:12 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/Zx6ksYSgmj2ImGoCvoJTYa13+hRjJjg6p1KdXJ8gu58nJwCgV3OnpEmXRNkZ6TRA9oVWtEY8PEuFpGwxSogpQ=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:20:12 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (6.2ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 110ms (Views: 98.7ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/artists/1/paintings/8" for 127.0.0.1 at 2017-05-22 12:20:15 -0700
+Processing by PaintingsController#show as HTML
+  Parameters: {"artist_id"=>"1", "id"=>"8"}
+  [1m[36mPainting Load (0.9ms)[0m  [1m[34mSELECT  "paintings".* FROM "paintings" WHERE "paintings"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mArtist Load (0.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering paintings/show.html.erb within layouts/application
+  Rendered paintings/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 125ms (Views: 115.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-05-22 12:20:19 -0700
+Processing by ArtistsController#index as HTML
+  [1m[36mPainting Load (1.6ms)[0m  [1m[34mSELECT "paintings".* FROM "paintings"[0m
+  Rendering artists/index.html.erb within layouts/application
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered artists/index.html.erb within layouts/application (26.2ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+Completed 200 OK in 174ms (Views: 165.7ms | ActiveRecord: 3.6ms)
+
+
