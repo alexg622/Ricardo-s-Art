@@ -9,17 +9,25 @@ class ArtistsController < ApplicationController
 	end
 
 	def edit
-		@artist = Artist.find(params[:id])
+		if current_user
+			@artist = Artist.find(params[:id])
+		else 
+			redirect_to root_path
+		end 
 	end 
 
 	def update
-		@artist = Artist.find(params[:id])
-		@artist.assign_attributes(artists_params)
-		if @artist.save
-			redirect_to @artist 
+		if current_user
+			@artist = Artist.find(params[:id])
+			@artist.assign_attributes(artists_params)
+			if @artist.save
+				redirect_to @artist 
+			else 
+				@errors = @artist.errors.full_messages 
+				render 'edit'
+			end 
 		else 
-			@errors = @artist.errors.full_messages 
-			render 'edit'
+			redirect_to root_path
 		end 
 	end  
 
